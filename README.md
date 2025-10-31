@@ -26,51 +26,39 @@ We recommend you to arrange the project tree as follows.
 
 ```
 home # The cloned repository of "two-concurrent-CSI-Feedback"
-├── Parameter_setting_of_scenario.m # Setting Parameters for simulation
-├── Channel Sounding Procedure  
-│   ├── MARL
-│   │     ├── MARL_AP_PER_train_v2.py
-│   │     ├── MARL_AP_part.py
-│   │     ├── MARL_STA_part.py
-│   │     ├── MARL_STA_PER_train_v2.py
-│   ├── MARL_DNN # saving DNN model of Agents
-│   ├── main_MARL_PER_train_v3_3_2.m
-│   ├── main_MARL_for_test_v2.m
-│   ├── main_MARL_PER_train_validate_Q_Est.m
-│   ├── SumTree_update.m
-│   ├── SumTree_total_p.m
-│   ├── SumTree_get_leaf.m
-│   ├── SumTree_add.m
-│   ├── Memory_store.m
-│   ├── Memory_sample.m
-│   ├── Memory_batch_update.m
-│   ├── CSI_compression_modes.m
-│   ├── accuracy_psi_phi_fb.m
-│   ├── accuracy_CSI_fb.m
-│   ├── util_fun_nmse.m
-│   ├── Compression_Idx_Encoding.m
-│   ├── util_fun_CH_overhead.m
-│   ├── util_fun_CFI_overhead.m
-│   ├── tone_grouping.m
-│   ├── spatial_compression.m
-│   ├── reconstruction.m
-│   ├── channel_varation_level_cal.m
-│   ├── angle_quantization.m
-│   ├── Positional_Encoding.m
-│   ├── Result Analysis
-│   │     ├── Fig_LOSS_Train.m
-│   │     ├── Fig_Return_Curve.m
-│   │     ├── Fig_Q_est_v3.m
-│   │     ├── Fig2_Quantization_CDF_v2.m
-│   │     ├── Fig3_CSI_Analysis_v2.m
-├── CSI data set  # The data folder
+├── NS  
+│   ├── Agents
+│   │     ├── Agentutils.py
+│   │     ├── High_Level_Agent.py
+│   │     ├── High_Level_Agent_DQN.py
+│   ├── Environment
+│   │     ├── EnvUtils.py
+│   │     ├── NS_env_V2X.py
+│   │     ├── NS_env_V2X_baseline.py
+│   │     ├── vehilcles.csv
+│   ├── Models
+│   │     ├── DQN.py
+│   │     ├── High_OC.py
+│   │     ├── Modelutils.py
+│   ├── utils
+│   │     ├── Draw_Q_Est.py
+│   │     ├── init.py
+│   │     ├── parameters.py
+│   │     ├── Replay_Memory.py
+│   │     ├── Replay_Memory2.py
+│   │     ├── saveData.py
+│   │     ├── train_utils.py
+│   ├── train_utils.py
+│   ├── main_NS_50ms_change_option.py
+│   ├── main_NS_load_model.py
+│   ├── main_NS_no_PER.py
+
 ...
 ```
 # Run simulation
 - CSI data generation: The channel state information (CSI) matrix is generated from COST2100 model. You can generate your own dataset according to the open source library of [COST2100](https://github.com/cost2100/cost2100) as well. The details of data pre-processing can be found in our paper.
-- For detailed parameters, please refer to the "Parameter_setting_of_scenario.m" in the folder.
-- Training: Run "main_MARL_PER_train_v3_3_2.m" in the folder of "Channel Sounding Procedure".
-- Testing: Run "main_MARL_for_test_v2.m" and "main_MARL_PER_train_validate_Q_Est.m" in the folder of "Channel Sounding Procedure".
+- For detailed parameters, please refer to the "Parameter.py" in the folder of "utils".
+- Training: Run "main_NS.py" .
 
 # Contact
 If you have any problem with this code, please feel free to contact meijie@nbu.eud.cn.
