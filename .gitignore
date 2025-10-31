@@ -1,0 +1,43 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# PyCharm project settings
+.idea/
+.idea/HRL_OC.iml
+.idea/misc.xml
+
+# Output folders (不要上传结果数据)
+runs/
+train_data/
+utils/pic.pdf
+data/
+
+# Jupyter/IPython
+.ipynb_checkpoints
+
+# Pytest/mypy cache
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+
+# Coverage/test
+.coverage
+.cache
+*.cover
+*.log
+
+# Misc
+*.sqlite3
+*.pdf
+*.log
