@@ -165,7 +165,6 @@ def hwh_test(high_agent, environment):
                 environment.k4 = environment.complexity_CP
                 environment.beta = 0.05
                 environment.option = 0
-                environment.complexity_max = 3
             elif option_test == 1:
                 args.update({'low_policy': 'CC'})
                 environment.k1 = environment.CC_transmission_rate_CC
@@ -174,7 +173,6 @@ def hwh_test(high_agent, environment):
                 environment.k4 = environment.complexity_CC
                 environment.beta = 0.05
                 environment.option = 1
-                environment.complexity_max = 0.5
             environment.step_slot()
             for mTTI in range(args['num_of_mslots']):
                 environment.step_mini_slot((TTI * 7 + mTTI) % 350 + 1)
