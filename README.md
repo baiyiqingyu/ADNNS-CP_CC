@@ -1,5 +1,6 @@
 # Overview
-This is the Matlab and PyTorch implementation of the paper "Learning Aided Closed-loop Feedback: A Concurrent Dual Channel Information Feedback Mechanism for Wi-Fi". If you feel this repo helpful, please cite our paper:
+This is the Matlab and PyTorch implementation of the paper "Adaptive Non-Orthogonal RAN Slicing for
+Collaborative Driving with Bi-Level Optimization:
 ```
 @ARTICLE{10740600,
   author={Mei, Jie and Wang, Xianbin and Zheng, Kan},
@@ -15,7 +16,7 @@ This is the Matlab and PyTorch implementation of the paper "Learning Aided Close
 # Requirements
 To implement this project, you need to ensure the following requirements are installed.
  * Matlab >= 2021b
- * Python = 3.8 or 3.9, please refere to [Versions of Python Compatible with MATLAB Products by Release](https://www.mathworks.com/support/requirements/python-compatibility.html)
+ * Python = 3.9, please refere to [Versions of Python Compatible with MATLAB Products by Release](https://www.mathworks.com/support/requirements/python-compatibility.html)
  * Pytorch >= 1.2
 
 # Project Preparation
